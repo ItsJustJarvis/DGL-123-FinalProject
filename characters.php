@@ -10,7 +10,6 @@
 
 <body>
     <?php
-
     define("CHAR_DATA", "./characters.json");
     define('ERROR_MESSAGE', "<div><h3>Character Data could not be obtained. Contact administrator.</h3></div>");
 
@@ -35,20 +34,12 @@
         return $selectedCharacters;
     }
 
-    function createCard($character)
+    function outputAttributes($character)
     {
-        $image = $character["image_url"];
-        $firstName = $character["first_name"];
-        $lastName = $character["last_name"];
         $age = $character["age"] ?? "";
         $occupation = $character["occupation"] ?? "";
         $voice = $character["voiced_by"] ?? "";
 
-        echo "<li class='characters__itemContainer'>
-                    <div class='characters__item'>
-                        <img src='$image' alt='$firstName' class='characters__image'>
-                        <div class='characters__info'>
-                            <h3 class='characters__name'>$firstName $lastName</h3>";
         if (!empty($age)) {
             echo "<div class='characters__age characters__attribute'>
             <b>Age:</b> $age
@@ -64,6 +55,21 @@
             <b>Voiced by:</b> $voice
             </div>";
         }
+    }
+
+    function createCard($character)
+    {
+        $image = $character["image_url"];
+        $firstName = $character["first_name"];
+        $lastName = $character["last_name"];
+
+
+        echo "<li class='characters__itemContainer'>
+                <div class='characters__item'>
+                    <img src='$image' alt='$firstName' class='characters__image'>
+                    <div class='characters__info'>
+                        <h3 class='characters__name'>$firstName $lastName</h3>";
+        outputAttributes($character);
         echo "</div></div></li>";
     }
 
