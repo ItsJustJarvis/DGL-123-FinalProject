@@ -29,6 +29,12 @@
         return $data;
     }
 
+    function getFormSubmission()
+    {
+        $selectedCharacters = $_POST;
+        return $selectedCharacters;
+    }
+
     ?>
 </body>
 
