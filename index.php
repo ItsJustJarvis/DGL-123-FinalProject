@@ -28,7 +28,7 @@
                             <div class="form__card">
                                 <h3 class="form__heading">Select characters to show</h3>
 
-                                <form method="get">
+                                <form method="POST" action="">
                                     <ul class="form__items">
                                         <li class="form__item">
                                             <label for="homer"> Homer Simpson </label>
