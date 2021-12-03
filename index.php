@@ -70,7 +70,9 @@
                 </div>
                 <div class="characters__container layout-container">
                     <div class="characters__row layout-row">
-                        <ul class="characters__items"></ul>
+                        <ul class="characters__items">
+                            <?php include "characters.php" ?>
+                        </ul>
                     </div>
                 </div>
             </div>
