@@ -39,6 +39,7 @@
         $age = $character["age"] ?? "";
         $occupation = $character["occupation"] ?? "";
         $voice = $character["voiced_by"] ?? "";
+        $audio = $character["audio_url"];
 
         if (!empty($age)) {
             echo "<div class='characters__age characters__attribute'>
@@ -55,6 +56,12 @@
             <b>Voiced by:</b> $voice
             </div>";
         }
+        echo "<div class='characters__voicedBy characters__attribute'>
+                <audio controls class='audio'>
+                    <source src='$audio' type='audio/wav'>    
+                    Your browser does not support the audio element.
+                </audio> 
+            </div>";
     }
 
     function createCard($character)
