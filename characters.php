@@ -10,6 +10,9 @@
 
 <body>
     <?php
+
+    define("CHAR_DATA", "./characters.json");
+    define('ERROR_MESSAGE', "<div><h3>Character Data could not be obtained. Contact administrator.</h3></div>");
     ?>
 </body>
 
