@@ -5,8 +5,8 @@
         "age": "40",
         "occupation": " Nuclear Safety Inspector",
         "voiced_by": "Dan Castellaneta",
-        "image_url": "images/homer.png",
-        "audio_url": "audio/homer.wav"
+        "image_url": "./images/homer.png",
+        "audio_url": "./audio/homer.wav"
     },
     "marge": {
         "first_name": "Marge",
@@ -14,8 +14,8 @@
         "age": "40",
         "occupation": "Homemaker",
         "voiced_by": "Julie Kavner",
-        "image_url": "images/marge.png",
-        "audio_url": "audio/marge.wav"
+        "image_url": "./images/marge.png",
+        "audio_url": "./audio/marge.wav"
     },
     "bart": {
         "first_name": "Bart",
@@ -23,8 +23,8 @@
         "age": "10",
         "occupation": "Student",
         "voiced_by": "Nancy Cartwright",
-        "image_url": "images/bart.png",
-        "audio_url": "audio/bart.wav"
+        "image_url": "./images/bart.png",
+        "audio_url": "./audio/bart.wav"
     },
     "lisa": {
         "first_name": "Lisa",
@@ -32,15 +32,15 @@
         "age": "8",
         "occupation": "Student",
         "voiced_by": "Yeardley Smith",
-        "image_url": "images/lisa.png",
-        "audio_url": "audio/lisa.wav"
+        "image_url": "./images/lisa.png",
+        "audio_url": "./audio/lisa.wav"
     },
     "maggie": {
         "first_name": "Maggie",
         "last_name": "Simpson",
         "age": "8",
-        "image_url": "images/maggie.png",
-        "audio_url": "audio/maggie.wav"
+        "image_url": "./images/maggie.png",
+        "audio_url": "./audio/maggie.wav"
     },
     "moe": {
         "first_name": "Moe",
@@ -48,7 +48,7 @@
         "age": "55",
         "occupation": "Bartender",
         "voiced_by": "",
-        "image_url": "images/moe.png",
-        "audio_url": "audio/moe.wav"
+        "image_url": "./images/moe.png",
+        "audio_url": "./audio/moe.wav"
     }
 }
