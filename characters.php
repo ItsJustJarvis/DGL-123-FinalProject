@@ -37,30 +37,34 @@
 
     function createCard($character)
     {
-        $image = $character["image_url"] ?? "N/A";
-        $firstName = $character["first_name"] ?? "N/A";
-        $lastName = $character["last_name"] ?? "N/A";
-        $age = $character["age"] ?? "N/A";
-        $occupation = $character["occupation"] ?? "N/A";
-        $voice = $character["voiced_by"] ?? "N/A";
+        $image = $character["image_url"];
+        $firstName = $character["first_name"];
+        $lastName = $character["last_name"];
+        $age = $character["age"] ?? "";
+        $occupation = $character["occupation"] ?? "";
+        $voice = $character["voiced_by"] ?? "";
 
         echo "<li class='characters__itemContainer'>
                     <div class='characters__item'>
                         <img src='$image' alt='$firstName' class='characters__image'>
                         <div class='characters__info'>
-                            <h3 class='characters__name'>$firstName $lastName</h3>
-                            <div class='characters__age characters__attribute'>
-                                <b>Age:</b> $age
-                            </div>
-                            <div class='characters__occupation characters__attribute'>
-                                <b>Occupation:</b> $occupation
-                            </div>
-                            <div class='characters__voicedBy characters__attribute'>
-                                <b>Voiced by:</b> $voice
-                            </div>
-                        </div>
-                    </div>
-                </li>";
+                            <h3 class='characters__name'>$firstName $lastName</h3>";
+        if (!empty($age)) {
+            echo "<div class='characters__age characters__attribute'>
+            <b>Age:</b> $age
+            </div>";
+        }
+        if (!empty($occupation)) {
+            echo "<div class='characters__occupation characters__attribute'>
+            <b>Occupation:</b> $occupation
+            </div>";
+        }
+        if (!empty($voice)) {
+            echo " <div class='characters__voicedBy characters__attribute'>
+            <b>Voiced by:</b> $voice
+            </div>";
+        }
+        echo "</div></div></li>";
     }
 
     if (isDataAvailable(CHAR_DATA)) {
