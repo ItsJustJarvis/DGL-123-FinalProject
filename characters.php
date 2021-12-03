@@ -21,7 +21,8 @@
 <body>
     <?php
     define("CHAR_DATA", "./characters.json");
-    define('ERROR_MESSAGE', "<div><h3>Character Data could not be obtained. Contact administrator.</h3></div>");
+    define('DATA_ERROR', "<div><h3>Character Data could not be obtained. Contact administrator.</h3></div>");
+    define('INVALID_INPUT', "<div><h3>Invalid input.</h3></div>");
 
     function isDataAvailable($file)
     {
@@ -31,11 +32,15 @@
         return false;
     }
 
-    function getData($file)
+    function getData($filePath)
     {
-        $json = file_get_contents($file);
-        $data = json_decode($json, true);
-        return $data;
+        if (is_string($filePath)) {
+            $json = file_get_contents($filePath);
+            $data = json_decode($json, true);
+            return $data;
+        } else {
+            echo INVALID_INPUT;
+        }
     }
 
     function getFormSubmission()
@@ -102,7 +107,7 @@
             }
         }
     } else {
-        echo ERROR_MESSAGE;
+        echo DATA_ERROR;
     }
     ?>
 </body>
