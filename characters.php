@@ -62,6 +62,21 @@
                     </div>
                 </li>";
     }
+
+    if (isDataAvailable(CHAR_DATA)) {
+        $characterDetails = getData(CHAR_DATA);
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $selectedCharacters = getFormSubmission();
+            foreach ($selectedCharacters as $key => $value) {
+                if ($value == "on") {
+                    createCard($characterDetails[$key]);
+                }
+            }
+        }
+    } else {
+        echo ERROR_MESSAGE;
+    }
     ?>
 </body>
 
