@@ -13,6 +13,14 @@
 
     define("CHAR_DATA", "./characters.json");
     define('ERROR_MESSAGE', "<div><h3>Character Data could not be obtained. Contact administrator.</h3></div>");
+
+    function isDataAvailable($file)
+    {
+        if (file_exists($file) && is_readable($file)) {
+            return true;
+        }
+        return false;
+    }
     ?>
 </body>
 
