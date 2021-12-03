@@ -78,6 +78,10 @@
             </div>
         </div>
     </div>
+    <script>
+        let audio = document.querySelectorAll(".audio");
+        audio.forEach(element => element.volume = 0.5);
+    </script>
 </body>
 
 </html>
