@@ -11,7 +11,7 @@
 
 <body>
     <header id="masthead" class="site-header layout-container">
-        <a href="/">
+        <a href="index.php">
             <img class="site-header__logo" src="images/logo.svg" alt="Logo" />
         </a>
     </header>
