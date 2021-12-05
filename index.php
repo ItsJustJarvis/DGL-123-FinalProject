@@ -20,6 +20,11 @@
 </head>
 
 <body>
+    <?php
+    require "characters.php";
+    updateLocalData($conn, CHAR_DATA);
+    $characterDetails = getCharacterDetails(CHAR_DATA);
+    ?>
     <header id="masthead" class="site-header layout-container">
         <a href="index.php">
             <img class="site-header__logo" src="images/logo.svg" alt="Logo" />
@@ -36,43 +41,45 @@
                             </div>
 
                             <div class="form__card">
-                                <h3 class="form__heading">Select characters to show</h3>
-
                                 <form method="POST" action="">
+                                    <h3 class="form__heading">Select characters to show</h3>
+                                    <ul class="form__items">
+                                        <?php
+                                        list_characters($characterDetails);
+                                        ?>
+                                    </ul>
+                                    <input class="form__button" type="submit" value="Show Characters" name="show" />
+                                </form>
+                                <form method="POST" action="" enctype="multipart/form-data">
+                                    <h3 class="form__heading">Or add a new character to the list!</h3>
                                     <ul class="form__items">
                                         <li class="form__item">
-                                            <label for="homer"> Homer Simpson </label>
-
-                                            <input id="homer" type="checkbox" name="homer" />
+                                            <label for="first_name">First Name</label>
+                                            <input id="first_name" type="text" name="first_name" required />
                                         </li>
                                         <li class="form__item">
-                                            <label for="marge"> Marge Simpson </label>
-
-                                            <input id="marge" type="checkbox" name="marge" />
+                                            <label for="last_name">Last Name</label>
+                                            <input id="last_name" type="text" name="last_name" required />
                                         </li>
                                         <li class="form__item">
-                                            <label for="bart"> Bart Simpson </label>
-
-                                            <input id="bart" type="checkbox" name="bart" />
+                                            <label for="age">Age</label>
+                                            <input id="age" type="number" name="age" />
                                         </li>
                                         <li class="form__item">
-                                            <label for="lisa"> Lisa Simpson </label>
-
-                                            <input id="lisa" type="checkbox" name="lisa" />
+                                            <label for="occupation">Occupation</label>
+                                            <input id="occupation" type="text" name="occupation" />
                                         </li>
                                         <li class="form__item">
-                                            <label for="maggie"> Maggie Simpson </label>
-
-                                            <input id="maggie" type="checkbox" name="maggie" />
+                                            <label for="voiced_by">Voiced By</label>
+                                            <input id="voiced_by" type="text" name="voiced_by" />
                                         </li>
                                         <li class="form__item">
-                                            <label for="moe"> Moe Szyslak </label>
-
-                                            <input id="moe" type="checkbox" name="moe" />
+                                            <label for="image_upload">Add Image</label>
+                                            <input type="file" name="image_upload" id="image_upload" required>
                                         </li>
                                     </ul>
-
-                                    <input class="form__button" type="submit" value="Show Characters" />
+                                    <input class="form__button" type="submit" value="Add Character" name="upload" />
+                                    <?php require "add_character.php" ?>
                                 </form>
                             </div>
                         </div>
@@ -81,7 +88,7 @@
                 <div class="characters__container layout-container">
                     <div class="characters__row layout-row">
                         <ul class="characters__items">
-                            <?php require "characters.php" ?>
+                            <?php showCharacterCards($characterDetails) ?>
                         </ul>
                     </div>
                 </div>
