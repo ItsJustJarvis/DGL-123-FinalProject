@@ -116,10 +116,9 @@
         echo "</div></div></li>";
     }
 
-    if (isDataAvailable(CHAR_DATA)) {
-        $characterDetails = getData(CHAR_DATA);
-
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    function showCharacterCards($characterDetails)
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["show"])) {
             $selectedCharacters = getFormSubmission();
             foreach ($selectedCharacters as $key => $value) {
                 if ($value == "on") {
@@ -127,8 +126,6 @@
                 }
             }
         }
-    } else {
-        echo DATA_ERROR;
     }
     ?>
 </body>
