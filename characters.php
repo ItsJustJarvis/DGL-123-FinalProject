@@ -28,7 +28,7 @@
 
     function isDataAvailable($file)
     {
-        if (file_exists($file) && is_readable($file)) {
+        if (file_exists($file) && is_readable($file) && is_writable($file)) {
             return true;
         }
         return false;
