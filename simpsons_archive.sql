@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2021 at 03:47 AM
+-- Generation Time: Dec 05, 2021 at 03:52 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -47,7 +47,7 @@ INSERT INTO `characters` (`id`, `first_name`, `last_name`, `age`, `occupation`, 
 (2, 'Marge', 'Simpson', 40, 'Homemaker', 'Julie Kavner', './images/marge.png', './audio/marge.wav'),
 (3, 'Bart', 'Simpson', 10, 'Student', 'Nancy Cartwright', './images/bart.png', './audio/bart.wav'),
 (4, 'Lisa', 'Simpson', 8, 'Student', 'Yeardley Smith', './images/lisa.png', './audio/lisa.wav'),
-(5, 'Maggie', 'Simpson', 8, NULL, NULL, './images/maggie.png', './audio/maggie.wav'),
+(5, 'Maggie', 'Simpson', 1, NULL, NULL, './images/maggie.png', './audio/maggie.wav'),
 (6, 'Moe', 'Szyslak', 55, 'Bartender', NULL, './images/moe.png', './audio/moe.wav'),
 (19, 'Nelson', 'Muntz', 10, 'Bully', 'Nancy Cartwright', './images/nelson.PNG', NULL),
 (21, 'Abe', 'Simpson', 83, 'Veteran', 'Dan Castellaneta', './images/abe_simpson.jpg', NULL);
