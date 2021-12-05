@@ -52,6 +52,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["upload"])) {
             die;
         }
     }
+
+
+    if (!isCharacterAlreadyStored($conn, $first_name, $last_name)) {
+        $sql = "INSERT into characters (first_name, last_name, age, occupation, voiced_by, image_url, audio_url) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $statement = $conn->prepare($sql);
+        $statement->bind_param('ssissss', $first_name, $last_name, $age, $occupation, $voiced_by, $image_url, $audio_url);
+        $statement->execute();
+
+        if (mysqli_affected_rows($conn) == 1) {
+            echo SUCCESS;
+        } else {
+            echo FAILURE;
+        }
+    } else {
+        echo ALREADY_EXISTS;
+    }
+}
+
 function isCharacterAlreadyStored($db, $first_name, $last_name)
 {
     $sql = "SELECT * FROM characters WHERE first_name = ? AND last_name = ?";
