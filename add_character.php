@@ -55,6 +55,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["upload"])) {
 
 
     if (!isCharacterAlreadyStored($conn, $first_name, $last_name)) {
+
+        if (!empty($_FILES["image_upload"])) {
+            $target_dir = "./images/";
+            $upload = $_FILES["image_upload"];
+            $target_image_file = $target_dir . basename($upload["name"]);
+            $image_file_type = strtolower(pathinfo($target_image_file, PATHINFO_EXTENSION));
+
+            $image_url = $target_image_file;
+            handleImageUpload($upload, $target_image_file, $image_file_type);
+        }
+
         $sql = "INSERT into characters (first_name, last_name, age, occupation, voiced_by, image_url, audio_url) VALUES (?, ?, ?, ?, ?, ?, ?)";
         $statement = $conn->prepare($sql);
         $statement->bind_param('ssissss', $first_name, $last_name, $age, $occupation, $voiced_by, $image_url, $audio_url);
