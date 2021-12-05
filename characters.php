@@ -20,6 +20,8 @@
 
 <body>
     <?php
+    $conn = mysqli_connect('localhost', 'root', '', 'simpsons_archive') or die("Error " . mysqli_error($conn));
+
     define("CHAR_DATA", "./characters.json");
     define('DATA_ERROR', "<div><h3>Character Data could not be obtained. Contact administrator.</h3></div>");
     define('INVALID_INPUT', "<div><h3>Invalid input.</h3></div>");
