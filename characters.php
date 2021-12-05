@@ -49,6 +49,19 @@
         }
     }
 
+    function list_characters($characterDetails)
+    {
+        foreach ($characterDetails as $character) {
+            $label = strtolower($character['first_name']);
+            $full_name = $character['first_name'] . " " . $character['last_name'];
+
+            echo "<li class='form__item'>
+            <label for='$label'>$full_name</label>
+            <input id='$label' type='checkbox' name='$label'
+        </li>";
+        }
+    }
+
     function getFormSubmission()
     {
         $selectedCharacters = $_POST;
