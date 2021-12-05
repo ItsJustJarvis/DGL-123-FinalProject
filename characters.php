@@ -34,12 +34,16 @@
         return false;
     }
 
-    function getData($filePath)
+    function getCharacterDetails($filePath)
     {
         if (is_string($filePath)) {
-            $json = file_get_contents($filePath);
-            $data = json_decode($json, true);
-            return $data;
+            if (isDataAvailable($filePath)) {
+                $json = file_get_contents($filePath);
+                $data = json_decode($json, true);
+                return $data;
+            } else {
+                echo DATA_ERROR;
+            }
         } else {
             echo INVALID_INPUT;
         }
