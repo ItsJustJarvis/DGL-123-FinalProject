@@ -52,4 +52,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["upload"])) {
             die;
         }
     }
+function isCharacterAlreadyStored($db, $first_name, $last_name)
+{
+    $sql = "SELECT * FROM characters WHERE first_name = ? AND last_name = ?";
+    $statement = $db->prepare($sql);
+    $statement->bind_param('ss', $first_name, $last_name);
+    $statement->execute();
+
+    $result = $statement->get_result();
+
+    if ($result->num_rows > 0) {
+        return true;
+    } else {
+        return false;
+    }
 }
