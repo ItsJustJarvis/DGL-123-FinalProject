@@ -54,6 +54,9 @@ h3:first-child {
 }
 
 .form__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     padding: 4%;
 }
 
@@ -84,6 +87,11 @@ h3:first-child {
 }
 
 @media screen and (min-width: 700px) {
+    .form__card {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     .characters__items {
         display: flex;
         flex-wrap: wrap;
