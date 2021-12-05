@@ -127,6 +127,15 @@
             }
         }
     }
+
+    function makeQuery($db, $query)
+    {
+        $statement = $db->prepare($query);
+        $statement->execute();
+        $result = $statement->get_result();
+        return $result;
+    }
+
     ?>
 </body>
 
