@@ -136,6 +136,18 @@
         return $result;
     }
 
+    function updateLocalData($db, $file)
+    {
+        $select_all_query = "SELECT * FROM characters";
+        $result = makeQuery($db, $select_all_query);
+        $all_characters = array();
+
+        while ($row = mysqli_fetch_assoc($result)) {
+            $all_characters[strtolower($row["first_name"])] = $row;
+        }
+        file_put_contents($file, json_encode($all_characters));
+    }
+
     ?>
 </body>
 
