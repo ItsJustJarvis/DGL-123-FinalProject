@@ -41,12 +41,14 @@
 
     function handleImageUpload($upload, $target_image_file, $image_file_type)
     {
+        $upload_status = false;
         if (isImage($upload)) {
             if (!fileAlreadyExists($target_image_file)) {
                 if (isFileSizeOk($upload)) {
                     if (isImageFormatOk($image_file_type)) {
                         if (move_uploaded_file($upload["tmp_name"], $target_image_file)) {
                             echo "<div><p>The file " . htmlspecialchars(basename($upload["name"])) . " has been uploaded.</p></div>";
+                            $upload_status = true;
                         } else {
                             echo FAILED_UPLOAD;
                         }
@@ -62,4 +64,5 @@
         } else {
             echo INVALID_FILE;
         }
+        return $upload_status;
     }
