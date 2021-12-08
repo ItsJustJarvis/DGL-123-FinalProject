@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2021 at 03:52 AM
+-- Generation Time: Dec 08, 2021 at 07:20 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -50,7 +50,9 @@ INSERT INTO `characters` (`id`, `first_name`, `last_name`, `age`, `occupation`, 
 (5, 'Maggie', 'Simpson', 1, NULL, NULL, './images/maggie.png', './audio/maggie.wav'),
 (6, 'Moe', 'Szyslak', 55, 'Bartender', NULL, './images/moe.png', './audio/moe.wav'),
 (19, 'Nelson', 'Muntz', 10, 'Bully', 'Nancy Cartwright', './images/nelson.PNG', NULL),
-(21, 'Abe', 'Simpson', 83, 'Veteran', 'Dan Castellaneta', './images/abe_simpson.jpg', NULL);
+(21, 'Abe', 'Simpson', 83, 'Veteran', 'Dan Castellaneta', './images/abe_simpson.jpg', NULL),
+(22, 'Milhouse', 'Van Houten', 10, 'Student', 'Pamela Hayden', './images/Milhouse_Van_Houten.png', NULL),
+(32, 'Reeve', 'Jarvis', 28, 'Student', 'Himself', './images/ReeveJarvis.JPG', NULL);
 
 --
 -- Indexes for dumped tables
@@ -70,7 +72,7 @@ ALTER TABLE `characters`
 -- AUTO_INCREMENT for table `characters`
 --
 ALTER TABLE `characters`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
