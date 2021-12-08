@@ -1,1 +1,102 @@
-{"homer":{"id":1,"first_name":"Homer","last_name":"Simpson","age":40,"occupation":"Nuclear Safety Inspector","voiced_by":"Dan Castellaneta","image_url":".\/images\/homer.png","audio_url":".\/audio\/homer.wav"},"marge":{"id":2,"first_name":"Marge","last_name":"Simpson","age":40,"occupation":"Homemaker","voiced_by":"Julie Kavner","image_url":".\/images\/marge.png","audio_url":".\/audio\/marge.wav"},"bart":{"id":3,"first_name":"Bart","last_name":"Simpson","age":10,"occupation":"Student","voiced_by":"Nancy Cartwright","image_url":".\/images\/bart.png","audio_url":".\/audio\/bart.wav"},"lisa":{"id":4,"first_name":"Lisa","last_name":"Simpson","age":8,"occupation":"Student","voiced_by":"Yeardley Smith","image_url":".\/images\/lisa.png","audio_url":".\/audio\/lisa.wav"},"maggie":{"id":5,"first_name":"Maggie","last_name":"Simpson","age":1,"occupation":null,"voiced_by":null,"image_url":".\/images\/maggie.png","audio_url":".\/audio\/maggie.wav"},"moe":{"id":6,"first_name":"Moe","last_name":"Szyslak","age":55,"occupation":"Bartender","voiced_by":null,"image_url":".\/images\/moe.png","audio_url":".\/audio\/moe.wav"},"nelson":{"id":19,"first_name":"Nelson","last_name":"Muntz","age":10,"occupation":"Bully","voiced_by":"Nancy Cartwright","image_url":".\/images\/nelson.PNG","audio_url":null},"abe":{"id":21,"first_name":"Abe","last_name":"Simpson","age":83,"occupation":"Veteran","voiced_by":"Dan Castellaneta","image_url":".\/images\/abe_simpson.jpg","audio_url":null}}
+{
+    "homer": {
+        "id": 1,
+        "first_name": "Homer",
+        "last_name": "Simpson",
+        "age": 40,
+        "occupation": "Nuclear Safety Inspector",
+        "voiced_by": "Dan Castellaneta",
+        "image_url": ".\/images\/homer.png",
+        "audio_url": ".\/audio\/homer.wav"
+    },
+    "marge": {
+        "id": 2,
+        "first_name": "Marge",
+        "last_name": "Simpson",
+        "age": 40,
+        "occupation": "Homemaker",
+        "voiced_by": "Julie Kavner",
+        "image_url": ".\/images\/marge.png",
+        "audio_url": ".\/audio\/marge.wav"
+    },
+    "bart": {
+        "id": 3,
+        "first_name": "Bart",
+        "last_name": "Simpson",
+        "age": 10,
+        "occupation": "Student",
+        "voiced_by": "Nancy Cartwright",
+        "image_url": ".\/images\/bart.png",
+        "audio_url": ".\/audio\/bart.wav"
+    },
+    "lisa": {
+        "id": 4,
+        "first_name": "Lisa",
+        "last_name": "Simpson",
+        "age": 8,
+        "occupation": "Student",
+        "voiced_by": "Yeardley Smith",
+        "image_url": ".\/images\/lisa.png",
+        "audio_url": ".\/audio\/lisa.wav"
+    },
+    "maggie": {
+        "id": 5,
+        "first_name": "Maggie",
+        "last_name": "Simpson",
+        "age": 1,
+        "occupation": null,
+        "voiced_by": null,
+        "image_url": ".\/images\/maggie.png",
+        "audio_url": ".\/audio\/maggie.wav"
+    },
+    "moe": {
+        "id": 6,
+        "first_name": "Moe",
+        "last_name": "Szyslak",
+        "age": 55,
+        "occupation": "Bartender",
+        "voiced_by": null,
+        "image_url": ".\/images\/moe.png",
+        "audio_url": ".\/audio\/moe.wav"
+    },
+    "nelson": {
+        "id": 19,
+        "first_name": "Nelson",
+        "last_name": "Muntz",
+        "age": 10,
+        "occupation": "Bully",
+        "voiced_by": "Nancy Cartwright",
+        "image_url": ".\/images\/nelson.PNG",
+        "audio_url": null
+    },
+    "abe": {
+        "id": 21,
+        "first_name": "Abe",
+        "last_name": "Simpson",
+        "age": 83,
+        "occupation": "Veteran",
+        "voiced_by": "Dan Castellaneta",
+        "image_url": ".\/images\/abe_simpson.jpg",
+        "audio_url": null
+    },
+    "milhouse": {
+        "id": 22,
+        "first_name": "Milhouse",
+        "last_name": "Van Houten",
+        "age": 10,
+        "occupation": "Student",
+        "voiced_by": "Pamela Hayden",
+        "image_url": ".\/images\/Milhouse_Van_Houten.png",
+        "audio_url": null
+    },
+    "reeve": {
+        "id": 32,
+        "first_name": "Reeve",
+        "last_name": "Jarvis",
+        "age": 28,
+        "occupation": "Student",
+        "voiced_by": "Himself",
+        "image_url": ".\/images\/ReeveJarvis.JPG",
+        "audio_url": null
+    }
+}
