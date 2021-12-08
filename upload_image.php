@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+    <!-- 
+        Document Details:
+
+        Course:         DGL-123 - PHP
+        Assignment:     Final Project
+        Filename:       upload_image.php
+        Author:         Reeve Jarvis
+        Student#:       N0189975
+        Date:           12/08/2021  
+    -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,18 +61,23 @@
                             $upload_status = true;
                         } else {
                             echo FAILED_UPLOAD;
+                            die;
                         }
                     } else {
                         echo INVALID_FORMAT;
+                        die;
                     }
                 } else {
                     echo FILE_TOO_LARGE;
+                    die;
                 }
             } else {
                 echo DUPLICATE_FILE;
+                die;
             }
         } else {
             echo INVALID_FILE;
+            die;
         }
         return $upload_status;
     }

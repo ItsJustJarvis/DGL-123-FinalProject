@@ -10,7 +10,7 @@
         Filename:       characters.php
         Author:         Reeve Jarvis
         Student#:       N0189975
-        Date:           12/03/2021  
+        Date:           12/08/2021  
     -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,16 +38,13 @@
 
     function getCharacterDetails($filePath)
     {
-        if (is_string($filePath)) {
-            if (isDataAvailable($filePath)) {
-                $json = file_get_contents($filePath);
-                $data = json_decode($json, true);
-                return $data;
-            } else {
-                echo DATA_ERROR;
-            }
+        if (isDataAvailable($filePath)) {
+            $json = file_get_contents($filePath);
+            $data = json_decode($json, true);
+            return $data;
         } else {
-            echo INVALID_INPUT;
+            echo DATA_ERROR;
+            die;
         }
     }
 
