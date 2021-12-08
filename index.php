@@ -11,11 +11,18 @@
         Author:         Reeve Jarvis
         Student#:       N0189975
         Date:           12/08/2021  
+
+        USAGE INSTRUCTIONS:
+
+        1. Create a new database in phpMyAdmin named: rjarvis_simpsons_archive
+        2. Import rjarvis_simpsons_archive.sql dump file located in repository
+        3. Load webpage: localhost/dgl-123-finalproject-rjarvis
+
     -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Simpsons Archives</title>
+    <title>RJarvis Simpsons Archive</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
 
