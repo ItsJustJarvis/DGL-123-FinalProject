@@ -10,9 +10,7 @@
         Filename:       index.php
         Author:         Reeve Jarvis
         Student#:       N0189975
-        Date:           12/08/2021 
-        
-        I have added database functionality to this project, and included an export file as was shown in our assignment. Please create the database simpsons_archive and import the provided simpsons_archive.sql file.
+        Date:           12/08/2021  
     -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

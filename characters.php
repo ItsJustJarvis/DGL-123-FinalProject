@@ -20,31 +20,7 @@
 
 <body>
     <?php
-    $conn = mysqli_connect('localhost', 'root', '');
-
-    if (!$conn) {
-        echo "Could not connect to database.";
-        die;
-    }
-
-    $db_selected = mysqli_select_db($conn, 'simpsons_archive');
-
-    if (!$db_selected) {
-        $sql = 'CREATE DATABASE simpsons_archive';
-
-        if (mysqli_query($conn, $sql)) {
-            echo "Database my_db created successfully\n";
-            if (isDataAvailable("./simpsons_archive.sql")) {
-                $table = file_get_contents('./simpsons_archive.sql');
-                $conn->multi_query($table);
-                mysqli_select_db($conn, 'simpsons_archive');
-            } else {
-                echo "Cant create table: $conn->error";
-            }
-        } else {
-            echo 'Error creating database: ' . $conn->error . "\n";
-        }
-    }
+    $conn = mysqli_connect('localhost', 'root', '', 'simpsons_archive') or die("Error " . mysqli_error($conn));
 
     define("CHAR_DATA", "./characters.json");
     define('DATA_ERROR', "<div><h3>Character Data could not be obtained. Contact administrator.</h3></div>");
