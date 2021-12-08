@@ -35,7 +35,7 @@
                                 <img src="images/simpsons.jpg" alt="Simpsons" class="form__image" />
                             </div>
                             <div class="form__card">
-                                <form method="POST" action="" enctype="multipart/form-data">
+                                <form method="POST" action="add_character_handler.php" enctype="multipart/form-data">
                                     <h3 class="form__heading">Enter Character details. Must have name and a picture.</h3>
                                     <ul class="form__items">
                                         <li class="form__item">
@@ -64,7 +64,6 @@
                                         </li>
                                     </ul>
                                     <input class="form__button" type="submit" value="Add Character" name="upload" />
-                                    <?php require "add_character_handler.php" ?>
                                 </form>
                             </div>
                         </div>
