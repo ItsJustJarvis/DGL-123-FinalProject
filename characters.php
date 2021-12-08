@@ -26,6 +26,8 @@
     define('DATA_ERROR', "<div><h3>Character Data could not be obtained. Contact administrator.</h3></div>");
     define('INVALID_INPUT', "<div><h3>Invalid input.</h3></div>");
 
+    updateLocalData($conn, CHAR_DATA);
+
     function isDataAvailable($file)
     {
         if (file_exists($file) && is_readable($file) && is_writable($file)) {
