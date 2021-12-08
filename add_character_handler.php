@@ -6,7 +6,7 @@ define("SUCCESS", "<div><p>Character successfully uploaded to database.</p></div
 define("FAILURE", "<div><p>Character upload failed.</p></div>");
 define("ALREADY_EXISTS", "<div><p>Character already in database.</p></div>");
 
-$conn = mysqli_connect('localhost', 'root', '', 'simpsons_archive');
+$conn = mysqli_connect('localhost', 'root', '', 'rjarvis_simpsons_archive');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["upload"])) {
 

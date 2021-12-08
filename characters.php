@@ -20,7 +20,7 @@
 
 <body>
     <?php
-    $conn = mysqli_connect('localhost', 'root', '', 'simpsons_archive') or die("Error " . mysqli_error($conn));
+    $conn = mysqli_connect('localhost', 'root', '', 'rjarvis_simpsons_archive') or die("Error " . mysqli_error($conn));
 
     define("CHAR_DATA", "./characters.json");
     define('DATA_ERROR', "<div><h3>Character Data could not be obtained. Contact administrator.</h3></div>");
