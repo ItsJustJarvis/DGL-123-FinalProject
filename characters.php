@@ -51,8 +51,9 @@
         }
     }
 
-    function list_characters($characterDetails)
+    function list_characters()
     {
+        $characterDetails = getCharacterDetails(CHAR_DATA);
         foreach ($characterDetails as $character) {
             $label = strtolower($character['first_name']);
             $full_name = $character['first_name'] . " " . $character['last_name'];
@@ -118,8 +119,9 @@
         echo "</div></div></li>";
     }
 
-    function showCharacterCards($characterDetails)
+    function showCharacterCards()
     {
+        $characterDetails = getCharacterDetails(CHAR_DATA);
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["show"])) {
             $selectedCharacters = getFormSubmission();
             foreach ($selectedCharacters as $key => $value) {
