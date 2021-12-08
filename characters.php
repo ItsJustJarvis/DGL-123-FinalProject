@@ -27,17 +27,17 @@
         die;
     }
 
-    $db_selected = mysqli_select_db($conn, 'RJarvis_simpsons_archive');
+    $db_selected = mysqli_select_db($conn, 'simpsons_archive');
 
     if (!$db_selected) {
         $sql = 'CREATE DATABASE simpsons_archive';
 
         if (mysqli_query($conn, $sql)) {
             echo "Database my_db created successfully\n";
-            if (isDataAvailable("./RJarvis_simpsons_archive.sql")) {
-                $table = file_get_contents('./RJarvis_simpsons_archive.sql');
+            if (isDataAvailable("./simpsons_archive.sql")) {
+                $table = file_get_contents('./simpsons_archive.sql');
                 $conn->multi_query($table);
-                mysqli_select_db($conn, 'RJarvis_simpsons_archive');
+                mysqli_select_db($conn, 'simpsons_archive');
             } else {
                 echo "Cant create table: $conn->error";
             }
